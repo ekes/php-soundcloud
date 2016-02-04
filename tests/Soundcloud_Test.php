@@ -185,6 +185,10 @@ class SoundCloudTest extends \PHPUnit_Framework_TestCase
         self::assertTrue($this->soundcloud->validResponseCode(200));
     }
 
+    function testResponseCodeResolve() {
+        self::assertTrue($this->soundcloud->validResponseCode(302));
+    }
+
     function testResponseCodeRedirect() {
         self::assertFalse($this->soundcloud->validResponseCode(301));
     }

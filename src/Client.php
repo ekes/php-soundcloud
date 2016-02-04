@@ -882,7 +882,7 @@ class Client
      */
     protected function _validResponseCode($code)
     {
-        return (bool)preg_match('/^20[0-9]{1}$/', $code);
+        return (bool)preg_match('/^20[0-9]{1}$|^302$/', $code);
     }
 
     /**
